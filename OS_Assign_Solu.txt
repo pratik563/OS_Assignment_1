@@ -1,0 +1,97 @@
+##### Problem One #####
+
+
+a)Navigate and List:
+
+ANS: . cd or cd ~    // To navigate for Home directory.
+	 . ls            // TO List out the contents in the Home Directory
+	 . mkdir LinuxAssignment // To create a new Directory
+	 
+
+b)File Management:
+
+Ans: . cd LinuxAssignment  // To move inside the directory.
+	 . touch file1.txt     // To create a file 
+	 . cat file1.txt       // To read the content inside the file.
+	 
+	 
+c)Directory Management:
+
+Ans: . mkdir docs  // Created docs directory inside LinuxAssignment directory
+     
+	 
+d)Copy and Move Files
+
+Ans: . cd LinuxAssignment  // navigated into LinuxAssignment directory
+     . cp file1.txt docs/  // copied the file into docs directory.
+	 . mv docs/file1.txt docs/file2.txt // To rename the file 
+	 
+e)Permissions and Ownership
+
+Ans: . chmod 744 file2.txt // to set the permission
+     . sudo chown $(whoami) file2.txt // to change owner of current user
+	 
+f)Final Checklist:
+
+Ans: . cd // to go to root directory
+     . cd LinuxAssignment // to go to the LinuxAssignment directory
+     . ls // List out the content from LinuxAssignment directory
+	 
+	 
+g)File Searching:
+
+Ans: . find . -type f -name "*.txt"  // To find the files with .txt extension
+
+     . grep "India" file1.txt  // to search text from lines of a file.
+	 
+h)System Information:
+
+Ans: . date // ti display date,day,time and year.
+
+i)Networking:
+
+Ans: . hostname -I  // To know the IP address
+     . ping google.com //
+	 
+j)File Compression:
+
+Ans: . zip -r docs.zip docs // To zip the directory
+     . sudo apt install zip // to install zip
+	 . mkdir extracted_docs // Created new directory first
+	 . unzip docs.zip -d extracted_docs // Unzipped in new directory
+
+	 
+k)File Editing:
+
+Ans: . sed -i 's/India/Bharat/g' file1.txt // To replace old text with new text in a file
+
+
+
+##### Problem Two #####
+
+a) Ans: . touch data.txt
+        . nano data.txt
+		. Edited the file
+		. head -n 10 data.txt
+		
+		
+b) Ans: . tail -n 5 data.txt
+
+c) Ans: . head -n 15 numbers.txt
+
+d) Ans: . tail -n 3 numbers.txt
+
+e) Ans: . touch input.txt 
+        . nano input.txt
+		. touch output.txt
+		. tr 'a-z' 'A-Z' < input.txt > output.txt
+		. cat output.txt
+		
+f) Ans: . touch duplicate.txt
+		. nano duplicate.txt
+		. cat duplicate.txt
+		. sort duplicate.txt | uniq
+		
+g) Ans: . touch fruit.txt
+		. nano fruit.txt
+		. sort fruit.txt | uniq -c
